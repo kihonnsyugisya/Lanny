@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Lanny</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="ここにサイト説明を入れます">
+<meta name="keywords" content="キーワード１,キーワード２
+,キーワード３,キーワード４,キーワード５">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" type="image/x-icon" href="images/lany/icons8.png">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="js/openclose.js"></script>
+<script src="js/fixmenu_pagetop.js"></script>
+<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body>
+
+<header>
+<h1 id="logo"><a href="index.html"><img src="images/lany/lany-logo.png" alt="居酒屋"></a></h1>
+<!--PC用（901px以上端末）メニュー-->
+<nav id="menubar">
+<ul>
+	<li><a href="index.html">ホーム</a></li>
+	<li><a href="template.html">プロフィール </a></li>
+	<li class="current"><a href="about.html">ギャラリー </a></li>
+	<li><a href="menu.html">メニュー</a></li>
+	<li><a href="contact.html">ご予約・お問合せ</a></li>
+</ul>
+</nav>
+<ul class="icon">
+<li><a href="#"><img src="images/icon_facebook.png" alt="Facebook"></a></li>
+<li><a href="#"><img src="images/icon_twitter.png" alt="Twitter"></a></li>
+<li><a href="#"><img src="images/icon_instagram.png" alt="Instagram"></a></li>
+</ul>
+</header>
+
+<!--小さな端末用（900px以下端末）ブロック-->
+<div id="menubar-s">
+<nav>
+<ul>
+	<li><a href="index.html"><img src="images/lany/lany-logo.png" alt="居酒屋"></a></li>
+	<li><a href="index.html">ホーム</a></li>
+	<li><a href="template.html">プロフィール </a></li>
+	<li class="current"><a href="about.html">ギャラリー </a></li>
+	<li><a href="menu.html">メニュー</a></li>
+	<li><a href="contact.html">ご予約・お問合せ</a></li>
+</ul>
+</nav>
+<ul class="icon">
+<li><a href="#"><img src="images/icon_facebook.png" alt="Facebook"></a></li>
+<li><a href="#"><img src="images/icon_twitter.png" alt="Twitter"></a></li>
+<li><a href="#"><img src="images/icon_instagram.png" alt="Instagram"></a></li>
+</ul>
+</div>
+
+<div id="contents">
+
+<div id="main">
+
+<section>
+
+<h2>ギャラリー </h2>
+<div class="grid gallery">
+	<div class="grid-item"><img src="images/lany/kate.jpg" alt=""></div>
+	<div class="grid-item"><img src="images/lany/inosuke.jpg" alt=""></div>
+	<div class="grid-item"><img src="images/lany/kimetu.jpg" alt=""></div>
+	<div class="grid-item"><img src="images/lany/koibasira.jpg" alt=""></div>
+	<div class="grid-item"><img src="images/lany/musibasira.jpg" alt=""></div>
+	<div class="grid-item"><img src="images/lany/otobasira.jpg" alt=""></div>
+	<div class="grid-item"><img src="images/lany/tekkamenn.jpg" alt=""></div>
+	<div class="grid-item"><img src="images/lany/zenitu.jpg" alt=""></div>
+	<div class="grid-item"><img src="images/lany/nails.jpg" alt=""></div>
+	<div class="grid-item"><img src="images/lany/nails2.jpg" alt=""></div>
+	<div class="grid-item"><img src="images/lany/nails3.jpg" alt=""></div>
+	<div class="grid-item"><img src="images/lany/nails4.jpg" alt=""></div>
+</div>
+
+<script>
+	var $grid = $('.grid').imagesLoaded( function() {
+  // 全ての画像が読み込まれてからMasonryを動作させる
+  $grid.masonry({
+    // ここにオプションを記述
+  });
+});
+	$('.grid').masonry({
+	  // options
+	  itemSelector: '.grid-item',
+	  columnWidth: '.grid-item',
+	  horizontalOrder: true
+	});
+</script>
+</section>
+
+</div>
+<!--/#main-->
+
+</div>
+<!--/#contents-->
+
+<footer>
+<small>Copyright&copy; <a href="index.html">居酒屋</a> All Rights Reserved.</small>
+<span class="pr"><a href="https://template-party.com/" target="_blank">《Web Design:Template-Party》</a></span>
+</footer>
+
+<!--背景画像2-->
+<aside id="mainimg">
+<div class="slide-sub2">slide-sub2</div>
+</aside>
+
+<!--PAGE TOPボタン（ページの上部へ戻るボタン）-->
+<p class="nav-fix-pos-pagetop"><a href="#"><img src="images/icon_pagetop.png" alt="PAGE TOP"></a></p>
+
+<!--メニュー開閉ボタン-->
+<div id="menubar_hdr" class="close"></div>
+<!--メニューの開閉処理条件設定　900px以下-->
+<script>
+	if (OCwindowWidth() <= 900) {
+		open_close("menubar_hdr", "menubar-s");
+	}
+</script>
+
+</body>
+</html>
